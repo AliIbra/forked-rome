@@ -1,10 +1,20 @@
 # Rank-One Model Editing (ROME)
 
-This repository provides an implementation of Rank-One Model Editing (ROME) on auto-regressive transformers (GPU-only).
+This repository contain an implementation of Rank-One Model Editing (ROME) on auto-regressive transformers (GPU-only).
 We currently support OpenAI's GPT-2 XL (1.5B) and EleutherAI's GPT-J (6B). The release of a 20B GPT-like model from EleutherAI is expected soon; we hope to support it ASAP.
 
-Feel free to open an issue if you find any problems; we are actively developing this repository and will monitor tickets closely.
 
+This repository provides a modified version of the ROME model editing method for execution on a local CPU, instead of using Google Colab. Additionally, a test case has been added to the `rome_demo.ipynb` to analyze the impact of negation on the model editing algorithm. Instead of changing the object (o), we use the negation of the relationship (r).
+
+## How to Use This Code
+You can follow the instructions from the **main ROME repository** on [GitHub](https://github.com/kmeng01/rome).  
+However, instead of executing the original notebooks (`rome.ipynb`, `causal_trace.ipynb`, and `causal_trace_frozen_mlp_attn.ipynb`), use the following modified versions:
+
+- `rome_demo.ipynb`
+- `causal_trace_demo.ipynb`
+- `causal_trace_frozen_mlp_attn_demo.ipynb`
+
+NOTE: the rest of the file is from the main rome repositry
 [![Colab ROME Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmeng01/rome/blob/main/notebooks/rome.ipynb)
 
 <p align="center">
